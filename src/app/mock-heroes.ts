@@ -6,6 +6,9 @@ export const HEROES :Hero[] = [
     {id:13, name:'Bombasto'},
     {id:14, name:'Calerista'},
     {id:15, name:'Magneta'},
-    {id:16, name:'N'},
-    {id:17, name:'Narco'}
+    {id:16, name:'Dynama'},
+    {id:17, name:'Narco'},
+    { id: 18, name: 'Dr IQ' },
+    { id: 19, name: 'Magma' },
+    { id: 20, name: 'Tornado' }
 ]
