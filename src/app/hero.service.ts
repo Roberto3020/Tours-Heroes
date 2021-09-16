@@ -9,11 +9,15 @@ import {HEROES} from './mock-heroes';
   providedIn: 'root'
 })
 export class HeroService {
-
-  getHeroes():Observable < Hero [] > {
-    const heroes = of (HEROES);
-    this.messageService.add('HeroService:fetched heroes')
+  getHeroes(): Observable<Hero[]> {
+    const heroes = of(HEROES);
+    this.messageService.add('HeroService: fetched heroes');
     return heroes;
+  }
+  getHero(id:number):Observable < Hero > {
+    const heroes = HEROES.find( h => h.id === id)!;
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    return of (heroes);
   }
   constructor( private messageService : MessageService) { }
 }
